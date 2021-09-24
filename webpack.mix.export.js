@@ -22,11 +22,8 @@ let exportPath = 'luthemes';
 
 // Theme root-level files to include.
 let files = [
-	'changelog.md',
 	'functions.php',
 	'index.php',
-	'readme.md',
-	'readme.txt',
 	'screenshot.png',
 	'style.css'
 ];
