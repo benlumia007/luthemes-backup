@@ -201,14 +201,17 @@
 
 @media screen and (min-width: 1025px) {
     .primary-navigation {
+        text-align: right;
         a {
             background: transparent;
-            color: #000000;
+            color: #ffffff;
         }
         
         .nav-menu {
             display: flex;
+            float: right;
             position: static;
+            padding: 0.6rem;
 
             li {
                 position: relative;
@@ -220,7 +223,7 @@
 
                     &:hover,
                     &:focus {
-                        background: #ffffff;
+                        background: transparent;
                     }
                 }
 

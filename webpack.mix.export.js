@@ -5,10 +5,10 @@
  * uploading to a site or zipping. Edit the `files` or `folders` variables if
  * you need to change something.
  *
- * @package   Initiator
+ * @package   Luthemes
  * @author    Benjamin Lu <benlumia007k@gmail.com>
  * @copyright 2019-2021. Benjamin Lu
- * @link      https://github.com/benlumia007/initiator
+ * @link      https://github.com/benlumia007/Luthemes
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -18,7 +18,7 @@ const rimraf  = require( 'rimraf' );
 const fs      = require( 'fs' );
 
 // Folder name to export the files to.
-let exportPath = 'initiator';
+let exportPath = 'luthemes';
 
 // Theme root-level files to include.
 let files = [
