@@ -1,22 +1,22 @@
 {
-    "name": "benlumia007/initiator",
-    "description": "Initiator is a starter theme designed to help theme authors using Backdrop Core Framework.",
+    "name": "benlumia007/luthemes",
+    "description": "luthemes is a starter theme designed to help theme authors using Backdrop Core Framework.",
     "keywords": [
         "wordpress",
         "wordpress-theme"
     ],
-    "homepage": "https://github.com/benlumia007/initiator",
+    "homepage": "https://github.com/benlumia007/luthemes",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Benjamin Lu",
             "email": "benlumia007@gmail.com",
-            "homepage": "https://benjlu.com"
+            "homepage": "https://luthemes.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Initiator\\": "app/"
+            "Luthemes\\": "app/"
 		},
 		"files":[
 			"app/framework.php",

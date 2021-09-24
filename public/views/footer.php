@@ -23,7 +23,7 @@
 			printf(
 				// Translators: 1 = WordPress Link, 2 = Theme Link.
 				esc_html__( 'Powered By %1$s and %2$s', 'initiator' ),
-				Benlumia007\Backdrop\Site\render_wp_link(), // phpcs:ignore
+				Benlumia007\Backdrop\Site\render_cp_link(), // phpcs:ignore
 				Benlumia007\Backdrop\Site\render_theme_link() // phpcs:ignore
 			);
 			?>

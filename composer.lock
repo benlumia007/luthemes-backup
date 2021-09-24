@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7951e1130ccdf2643b260360376c31c",
+    "content-hash": "fa83127349e16151628d0746e76a857f",
     "packages": [
         {
             "name": "benlumia007/backdrop-core",

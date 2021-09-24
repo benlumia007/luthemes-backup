@@ -1,18 +1,18 @@
 {
-  "name": "initiator",
+  "name": "luthemes",
   "version": "1.0.0",
-  "description": "Initiator is a WordPress Starter Theme.",
+  "description": "luthemes is a WordPress Starter Theme.",
   "main": "resources/assets/js/app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benlumia007/initiator.git"
+    "url": "git+https://github.com/benlumia007/luthemes.git"
   },
   "author": "Benjamin Lu",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/benlumia007/initiator/issues"
+    "url": "https://github.com/benlumia007/luthemes/issues"
   },
-  "homepage": "https://github.com/benlumia007/initiator#readme",
+  "homepage": "https://github.com/benlumia007/luthemes#readme",
   "scripts": {
     "build": "npm run prod && npm run export",
     "watch": "mix watch",
