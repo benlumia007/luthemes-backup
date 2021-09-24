@@ -149,3 +149,13 @@ add_action( 'after_setup_theme', function() {
 		'default-color'          => '',
 	] );
 } );
+
+
+add_action( 'backdrop/templates/register', function( $templates ) {
+	$templates->add(
+		'template-home.php', [
+			'label' => esc_html__( 'Home', 'luthemes' ),
+			'post_types' => [ 'page' ]
+		]
+	);
+} );
