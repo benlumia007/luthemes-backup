@@ -9,7 +9,7 @@
  */
 
 
-namespace Initiator\Sidebar;
+namespace Luthemes\Sidebar;
 use Benlumia007\Backdrop\Component\Sidebar as SidebarContract;
 
 class Component extends SidebarContract {
@@ -20,12 +20,12 @@ class Component extends SidebarContract {
     public function defaults() {
         return array(
             'primary' => [
-                'name' => esc_html__( 'Primary Sidebar', 'initiator' ),
-                'desc' => esc_html__( 'test', 'initiator' ),
+                'name' => esc_html__( 'Primary Sidebar', 'luthemes' ),
+                'desc' => esc_html__( 'test', 'luthemes' ),
             ],
             'secondary' => [
-                'name' => esc_html__( 'Secondary Sidebar', 'initiator' ),
-                'desc' => esc_html__( 'test', 'initiator' ),
+                'name' => esc_html__( 'Secondary Sidebar', 'luthemes' ),
+                'desc' => esc_html__( 'test', 'luthemes' ),
             ]
         );
     }

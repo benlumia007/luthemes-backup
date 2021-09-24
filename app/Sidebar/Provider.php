@@ -11,9 +11,9 @@
 /**
  * Define namespace
  */
-namespace Initiator\Sidebar;
+namespace Luthemes\Sidebar;
 use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Initiator\Sidebar\Component;
+use Luthemes\Sidebar\Component;
 
 /**
  * Attr provider class.

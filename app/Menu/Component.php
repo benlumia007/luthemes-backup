@@ -1,6 +1,6 @@
 <?php
 
-namespace Initiator\Menu;
+namespace Luthemes\Menu;
 use Benlumia007\Backdrop\Component\Menu as MenuContract;
 
 class Component extends MenuContract {
@@ -10,9 +10,9 @@ class Component extends MenuContract {
 
     public function defaults() {
         return array(
-            'primary'   => esc_html__( 'Primary Sidebar', 'initiator' ),
-            'secondary' => esc_html__( 'Secondary Sidebar', 'initiator' ),
-            'social'    => esc_html__( 'Social Navigation', 'initiator' )
+            'primary'   => esc_html__( 'Primary Sidebar', 'luthemes' ),
+            'secondary' => esc_html__( 'Secondary Sidebar', 'luthemes' ),
+            'social'    => esc_html__( 'Social Navigation', 'luthemes' )
         );
     }
 }   

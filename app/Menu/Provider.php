@@ -11,9 +11,9 @@
 /**
  * Define namespace
  */
-namespace Initiator\Menu;
+namespace Luthemes\Menu;
 use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Initiator\Menu\Component;
+use Luthemes\Menu\Component;
 
 /**
  * Attr provider class.
