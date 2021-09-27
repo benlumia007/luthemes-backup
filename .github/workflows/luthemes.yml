@@ -17,4 +17,6 @@ jobs:
       - name: step four
         run: npm run build
       - name: step five
-        run: mv luthemes ~/public_html/wp-content/themes
+        run: rm -rf ~/public_html/wp-content/themes/luthemes
+      - name: step six
+        run: mv luthemes ~/public_html/wp-content/themes/luthemes
