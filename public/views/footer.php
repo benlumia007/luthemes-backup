@@ -13,7 +13,7 @@
 			<?php
 			printf(
 				// Translators: 1 = Date, 2 = Site Link.
-				esc_html__( 'Copyright &#169; %1$s. %2$s', 'luthemes' ),
+				esc_html__( 'Copyright &#169; 2014-%1$s. %2$s', 'luthemes' ),
 				absint( date_i18n( 'Y' ) ),
 				Benlumia007\Backdrop\Site\render_site_link() // phpcs:ignore
 			);

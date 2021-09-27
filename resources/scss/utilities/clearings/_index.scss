@@ -7,7 +7,16 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-@import 'a11y/index';
-@import 'alignments/index';
-@import 'clearings/index';
-@import 'links/index';
+.site-content,
+.site-main,
+.left-sidebar,
+.right-sidebar,
+.content-area,
+.widget-area {
+    &:before,
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}

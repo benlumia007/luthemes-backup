@@ -11,21 +11,23 @@
 <?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
-		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'no-sidebar' ) ); ?>">
-			<main id="main" class="content-area">
-				<?php
-					if ( have_posts() ) :
-						while ( have_posts() ) : the_post();
-							$engine->display( 'content/single'  );
-						endwhile;
-						comments_template();
-						the_posts_pagination();
-					else :
-							Benlumia007\Backdrop\Template\get_template_part( 'content/content', 'none' );
-					endif;
-				?>
-			</main>
-			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'primary' ] ); ?>
+		<div id="main" class="site-main">
+			<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'right-sidebar' ) ); ?>">
+				<main id="primary" class="content-area">
+					<?php
+						if ( have_posts() ) :
+							while ( have_posts() ) : the_post();
+								$engine->display( 'content/single'  );
+							endwhile;
+							comments_template();
+							the_posts_pagination();
+						else :
+								Benlumia007\Backdrop\Template\get_template_part( 'content/content', 'none' );
+						endif;
+					?>
+				</main>
+				<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'primary' ] ); ?>
+			</div>
 		</div>
 	</section>
 <?php $engine->display( 'footer' ); ?>
