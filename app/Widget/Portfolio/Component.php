@@ -11,9 +11,18 @@ class Component extends WP_Widget implements Bootable {
             'Theme Details'   // Name
         ); 
     }
+ 
+    public $args = array(
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+        'before_widget' => '<div class="widget-wrap">',
+        'after_widget'  => '</div></div>'
+    );
 
     public function form( $instance ) {
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' ); ?>
+ 
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' );
+        ?>
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'text_domain' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
@@ -30,33 +39,33 @@ class Component extends WP_Widget implements Bootable {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
         };
         
-        $portfolios = get_posts( array(
+        $get_all_posts = get_posts( array(
             'post_type'     => 'portfolio',
             'post_status'   => 'publish',
             'include' => array( get_queried_object_id() ),
         
         ) );
         
-        if( !empty( $portfolios ) ){
-            $categories = [];
+        if( !empty( $get_all_posts ) ){
+            $post_terms = [];
             
-            foreach( $portfolios as $portfolio ){
-                $categories[] = get_the_terms( $portfolio->ID, 'portfolio_category' );
+            foreach( $get_all_posts as $all_posts ){
+                $post_terms[] = get_the_terms( $all_posts->ID, 'portfolio_category' );
     
             }
     
-            $taxonomies = [];
+            $post_terms_array = [];
     
-            foreach($categories as $new_arr){
+            foreach($post_terms as $new_arr){
                 foreach($new_arr as $arr){
-                    $taxonomies[] = array(
+                    $post_terms_array[] = array(
                         'name'      => $arr->name,
                         'slug'      => $arr->slug
                     );
                 }
             }
 
-            $terms = array_unique( $taxonomies, SORT_REGULAR );
+            $terms = array_unique($post_terms_array, SORT_REGULAR);
             echo '<ul>';
                 foreach ( $terms as $term ) {
                     echo '<li>' . $term['name'] . '</li>';
