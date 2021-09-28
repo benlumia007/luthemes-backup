@@ -39,33 +39,33 @@ class Component extends WP_Widget implements Bootable {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
         };
         
-        $get_all_posts = get_posts( array(
+        $portfolios = get_posts( array(
             'post_type'     => 'portfolio',
             'post_status'   => 'publish',
             'include' => array( get_queried_object_id() ),
         
         ) );
         
-        if( !empty( $get_all_posts ) ){
-            $post_terms = [];
+        if( !empty( $portfolios ) ){
+            $taxonomies = [];
             
-            foreach( $get_all_posts as $all_posts ){
-                $post_terms[] = get_the_terms( $all_posts->ID, 'portfolio_category' );
+            foreach( $portfolios as $portfolio ){
+                $taxonomies[] = get_the_terms( $portfolio->ID, 'portfolio_category' );
     
             }
     
-            $post_terms_array = [];
+            $terminologies = [];
     
-            foreach($post_terms as $new_arr){
-                foreach($new_arr as $arr){
-                    $post_terms_array[] = array(
-                        'name'      => $arr->name,
-                        'slug'      => $arr->slug
+            foreach( $taxonomies as $categories ) {
+                foreach( $categories as $category ) {
+                    $terminologies[] = array(
+                        'name'      => $category->name,
+                        'slug'      => $category->slug
                     );
                 }
             }
 
-            $terms = array_unique($post_terms_array, SORT_REGULAR);
+            $terms = array_unique($terminologies, SORT_REGULAR);
             echo '<ul>';
                 foreach ( $terms as $term ) {
                     echo '<li>' . $term['name'] . '</li>';
