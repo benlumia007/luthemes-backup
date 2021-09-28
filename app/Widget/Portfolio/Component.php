@@ -65,7 +65,7 @@ class Component extends WP_Widget implements Bootable {
                 }
             }
 
-            $terms = array_unique($terminologies, SORT_REGULAR);
+            $terms = array_unique( $terminologies, SORT_REGULAR) ;
             echo '<ul>';
                 foreach ( $terms as $term ) {
                     echo '<li>' . $term['name'] . '</li>';
@@ -78,7 +78,7 @@ class Component extends WP_Widget implements Bootable {
  
     public function update( $new_instance, $old_instance ) {
  
-        $instance = array();
+        $instance = [];
  
         $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
  
