@@ -37,11 +37,7 @@ class Component extends WP_Widget implements Bootable {
  
         if ( ! empty( $instance['title'] ) ) {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
-        }
- 
-        echo '<div class="textwidget">';
-            echo esc_html__( $instance['text'], 'text_domain' );
-        echo '</div>';
+        };
         
         $get_all_posts = get_posts( array(
             'post_type'     => 'portfolio',
@@ -50,50 +46,32 @@ class Component extends WP_Widget implements Bootable {
         
         ) );
         
-            if( !empty( $get_all_posts ) ){
-        
-                //First Empty Array to store the terms
-                $post_terms = array();
-                
-                //2. Loop through the posts array and retrieve the terms attached to those posts
-                foreach( $get_all_posts as $all_posts ){
-        
-                    /**
-                     * 3. Store the new terms objects within `$post_terms`
-                     */
-                    $post_terms[] = get_the_terms( $all_posts->ID, 'portfolio_category' );
-        
-                }
-        
-                //Second Empty Array to store final term data in key, value pair
-                $post_terms_array = array();
-        
-                /**
-                 * 4. loop through `$post_terms` as it's a array of term objects.
-                 */
-        
-                foreach($post_terms as $new_arr){
-                    foreach($new_arr as $arr){
-        
-                        /**
-                         * 5. store the terms with our desired key, value pair inside `$post_terms_array`
-                         */
-                        $post_terms_array[] = array(
-                            'name'      => $arr->name,
-                            'term_id'   => $arr->term_id,
-                            'slug'      => $arr->slug
-                        );
-                    }
-                }
-        
-                //6. Make that array unique as duplicate entries can be there
-                $terms = array_unique($post_terms_array, SORT_REGULAR);
-                echo '<ul>';
-                    foreach ( $terms as $term ) {
-                        echo '<li>' . $term['name'] . '</li>';
-                    }
-                echo '</ul>';
+        if( !empty( $get_all_posts ) ){
+            $post_terms = [];
+            
+            foreach( $get_all_posts as $all_posts ){
+                $post_terms[] = get_the_terms( $all_posts->ID, 'portfolio_category' );
+    
             }
+    
+            $post_terms_array = [];
+    
+            foreach($post_terms as $new_arr){
+                foreach($new_arr as $arr){
+                    $post_terms_array[] = array(
+                        'name'      => $arr->name,
+                        'slug'      => $arr->slug
+                    );
+                }
+            }
+
+            $terms = array_unique($post_terms_array, SORT_REGULAR);
+            echo '<ul>';
+                foreach ( $terms as $term ) {
+                    echo '<li>' . $term['name'] . '</li>';
+                }
+            echo '</ul>';
+        }
 
         echo $args['after_widget']; 
     }
