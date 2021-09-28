@@ -21,6 +21,7 @@ $luthemes = new Benlumia007\Backdrop\Framework();
 $luthemes->provider( Luthemes\Sidebar\Provider::class );
 $luthemes->provider( Luthemes\Menu\Provider::class );
 $luthemes->provider( Luthemes\Portfolio\Provider::class );
+$luthemes->provider( Luthemes\Widget\Portfolio\Provider::class );
 
 /**
  * Boot the Framework

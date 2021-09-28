@@ -26,6 +26,10 @@ class Component extends SidebarContract {
             'secondary' => [
                 'name' => esc_html__( 'Secondary Sidebar', 'luthemes' ),
                 'desc' => esc_html__( 'test', 'luthemes' ),
+            ],
+            'portfolio' => [
+                'name' => esc_html__( 'Portfolio Sidebar', 'luthemes' ),
+                'desc' => esc_html__( 'Portfolio Sidebar', 'luthemes' )
             ]
         );
     }
