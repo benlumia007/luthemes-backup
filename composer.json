@@ -27,6 +27,15 @@
     },
     "require": {
         "php": ">=7.3.24",
-        "benlumia007/backdrop-core": "^3.0.0"
-	}
+        "benlumia007/backdrop": "v3.0.0.x-dev",
+        "benlumia007/backdrop-customize": "v1.0.0.x-dev",
+        "benlumia007/backdrop-customize-helpers": "v1.0.0.x-dev",
+        "benlumia007/backdrop-fontawesome": "v1.0.0.x-dev",
+        "benlumia007/backdrop-googlefonts": "v1.0.0.x-dev",
+        "benlumia007/backdrop-template-helpers": "v1.0.0.x-dev",
+        "benlumia007/backdrop-template-hierarchy": "v1.0.0.x-dev",
+        "benlumia007/backdrop-template-manager": "v1.0.0.x-dev",
+        "benlumia007/backdrop-template-view": "v1.0.0.x-dev",
+        "benlumia007/backdrop-theme": "v1.0.0.x-dev"
+    }
 }
