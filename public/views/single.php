@@ -26,7 +26,7 @@
 						endif;
 					?>
 				</main>
-				<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'primary' ] ); ?>
+				<?php Benlumia007\Backdrop\Theme\Menu\display( 'sidebar', [ 'primary' ] ); ?>
 			</div>
 		</div>
 	</section>

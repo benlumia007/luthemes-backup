@@ -16,6 +16,15 @@
 $luthemes = new Benlumia007\Backdrop\Framework();
 
 /**
+ * Register default providers
+ */
+$luthemes->provider( Benlumia007\Backdrop\FontAwesome\Provider::class );
+$luthemes->provider( Benlumia007\Backdrop\GoogleFonts\Provider::class );
+$luthemes->provider( Benlumia007\Backdrop\Template\Hierarchy\Provider::class );
+$luthemes->provider( Benlumia007\Backdrop\Template\Manager\Provider::class );
+$luthemes->provider( Benlumia007\Backdrop\Template\View\Provider::class );
+
+/**
  * Register Service Provider with the Framework
  */
 $luthemes->provider( Luthemes\Sidebar\Provider::class );
