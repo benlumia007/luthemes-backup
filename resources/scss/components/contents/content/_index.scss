@@ -54,6 +54,17 @@
                     }
                 }
             }
+
+            .entry-metadata {
+                .fa-user {
+                    padding-right: 0.3rem;
+                }
+
+                .fa-calendar-alt,
+                .fa-comment {
+                    padding: 0 0.3rem 0 0.4rem;
+                }
+            }
         }
     }
 }
