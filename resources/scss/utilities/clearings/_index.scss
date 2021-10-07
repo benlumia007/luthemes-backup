@@ -9,6 +9,7 @@
 
 .site-content,
 .site-main,
+.no-sidebar,
 .left-sidebar,
 .right-sidebar,
 .content-area,
@@ -19,4 +20,9 @@
         content: "";
         display: table;
     }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
 }

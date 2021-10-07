@@ -21,7 +21,7 @@
 							endwhile;
 							the_posts_pagination();
 						else :
-								$engine->display( 'content/none' );
+								$engine->display( 'content/404/none' );
 						endif;
 					?>
 				</main>

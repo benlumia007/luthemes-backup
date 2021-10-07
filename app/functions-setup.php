@@ -1,8 +1,8 @@
 <?php
 /**
- * Initiator ( functions-setup.php )
+ * luthemes ( functions-setup.php )
  *
- * @package   Initiator
+ * @package   luthemes
  * @copyright Copyright (C) 2019-2021. Benjamin Lu
  * @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
  * @author    Benjamin Lu ( https://benjlu.com )
@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Initiator;
+namespace luthemes;
 
 /**
  * Setup Theme Support.
@@ -67,19 +67,19 @@ add_action( 'after_setup_theme', function() {
 		) );
 
 		/**
-		 * By add_image_size( 'initiator-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
+		 * By add_image_size( 'luthemes-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
 		 */
-		add_image_size( 'initiator-small-thumbnails', 324, 324, true );
+		add_image_size( 'luthemes-small-thumbnails', 324, 324, true );
 
 		/**
-		 * By add_image_size( 'initiator-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
+		 * By add_image_size( 'luthemes-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
 		 */
-		add_image_size( 'initiator-medium-thumbnails', 810, 396, true );
+		add_image_size( 'luthemes-medium-thumbnails', 810, 396, true );
 
 		/**
-		 * By add_image_size( 'initiator-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
+		 * By add_image_size( 'luthemes-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
 		 */
-		add_image_size( 'initiator-large-thumbnails', 1170, 614, true );
+		add_image_size( 'luthemes-large-thumbnails', 1170, 614, true );
 		
 		/**
 		 * By adding add_theme_support( 'editor-styles' ); and add_editor_style(); to enable styles in the backend of the editor.
@@ -95,7 +95,7 @@ add_action( 'after_setup_theme', function() {
 		/**
 		 * Load theme translation.
 		 */
-		load_theme_textdomain( 'initiator', get_parent_theme_file_path( '/languages ' ) );
+		load_theme_textdomain( 'luthemes', get_parent_theme_file_path( '/languages ' ) );
 	}
 );
 
@@ -120,7 +120,7 @@ add_action( 'after_setup_theme', function() {
 			'header-image' => array(
 				'url'           => '%s/public/images/header-image.jpg',
 				'thumbnail_url' => '%s/public/images/header-image.jpg',
-				'description'   => esc_html__( 'Header Image', 'initiator' ),
+				'description'   => esc_html__( 'Header Image', 'luthemes' ),
 			),
 		)
 	);

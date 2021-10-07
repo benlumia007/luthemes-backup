@@ -8,8 +8,9 @@
 //
 
 .site-main {
-    margin: 1.125rem auto;
+    margin: 0 auto;
     max-width: 72.75rem; // 1164px;
+    padding: 1.125rem;
 
     .left-sidebar {
         .content-area {
@@ -36,12 +37,15 @@
     }
 
     .content-area {
-        background: #ffffff;
-        border: 0.063rem solid #cccccc;
         line-height: 1.8rem;
-        padding: 1.125rem;
-
+        
         .post {
+            background: #ffffff;
+            border: 0.063em solid #cccccc;
+            margin-bottom: 1.125rem;
+            min-height: 18rem;
+            padding: 1.125rem;
+
             .entry-header {
                 text-align: center;
 
@@ -66,5 +70,43 @@
                 }
             }
         }
+    }
+}
+
+@media screen and ( max-width: 63.938rem ) {
+    .no-sidebar {
+        .content-area {
+            .has-post-thumbnail {
+                padding-left: 1.125em;
+                position: unset;
+    
+                .post-thumbnail {
+                    position: unset;
+    
+                    .size-luthemes-small-thumbnails {
+                        height: auto;
+                        margin-bottom: 1.125em;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ( min-width: 64rem ) {
+    .no-sidebar {
+        .content-area {
+            .has-post-thumbnail {
+                position: relative;
+                padding-left: 21.375em;
+        
+                .post-thumbnail {
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }  
     }
 }

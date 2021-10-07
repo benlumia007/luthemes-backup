@@ -11,8 +11,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( has_post_thumbnail() ) { ?>
 		<picture class="post-thumbnail">
-			<source media="(max-width: 1024px)" srcset="<?php the_post_thumbnail_url( 'camaraderie-medium-thumbnails' ); ?>">
-			<?php the_post_thumbnail( 'camaraderie-small-thumbnails' ); ?>
+			<source media="(max-width: 1023px)" srcset="<?php the_post_thumbnail_url( 'luthemes-large-thumbnails' ); ?>">
+			<?php the_post_thumbnail( 'luthemes-small-thumbnails' ); ?>
 		</picture>
 	<?php } ?>
 	<header class="entry-header">
