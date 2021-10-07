@@ -62,9 +62,9 @@ add_action( 'after_setup_theme', function() {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		add_theme_support( 'post-formats', array(
-			'aside',
-		) );
+		add_theme_support( 'post-formats', [
+			'aside'
+		] );
 
 		/**
 		 * By add_image_size( 'luthemes-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
@@ -81,16 +81,6 @@ add_action( 'after_setup_theme', function() {
 		 */
 		add_image_size( 'luthemes-large-thumbnails', 1170, 614, true );
 		
-		/**
-		 * By adding add_theme_support( 'editor-styles' ); and add_editor_style(); to enable styles in the backend of the editor.
-		 */
-		add_theme_support( 'editor-styles' );
-		add_editor_style( 'public/css/editor.css' );
-
-		/**
-		 * By adding add_theme_support( 'align-wide' );. This will enable alignwide and alignfull.
-		 */
-		add_theme_support( 'align-wide' );
 
 		/**
 		 * Load theme translation.
@@ -125,23 +115,6 @@ add_action( 'after_setup_theme', function() {
 		)
 	);
 } );
-
-/**
- * Add Support Custom Background
- */
-add_action( 'after_setup_theme', function() {
-	add_theme_support( 'custom-background', [
-		'default-image'          => '',
-		'default-preset'         => 'default',
-		'default-position-x'     => 'left',
-		'default-position-y'     => 'top',
-		'default-size'           => 'auto',
-		'default-repeat'         => 'repeat',
-		'default-attachment'     => 'scroll',
-		'default-color'          => '',
-	] );
-} );
-
 
 add_action( 'backdrop/templates/register', function( $templates ) {
 	$templates->add(
