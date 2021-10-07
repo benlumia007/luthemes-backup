@@ -48,16 +48,13 @@ add_action( 'after_setup_theme', function() {
 		 * By adding add_theme_support( 'html5', arrayy() );, this feature when enabled allows the user use of HTML5 markup for
 		 * comment list, comment forms, search forms, galleries, and captions.
 		 */
-		add_theme_support(
-			'html5',
-			array(
-				'comment-list',
-				'comment-form',
-				'search-form',
-				'gallery',
-				'caption',
-			)
-		);
+		add_theme_support( 'html5', array(
+			'comment-list',
+			'comment-form',
+			'search-form',
+			'gallery',
+			'caption',
+		) );
 
 		/**
 		 * By adding add_theme_support( 'post-thumbnails' );, this feature when enabled allows you to setup featured images
@@ -83,12 +80,7 @@ add_action( 'after_setup_theme', function() {
 		 * By add_image_size( 'initiator-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
 		 */
 		add_image_size( 'initiator-large-thumbnails', 1170, 614, true );
-
-		/**
-		 * By add_theme_support( 'wp-block-styles' );. This should enable block styles on the frontend.
-		 */
-		add_theme_support( 'wp-block-styles' );
-
+		
 		/**
 		 * By adding add_theme_support( 'editor-styles' ); and add_editor_style(); to enable styles in the backend of the editor.
 		 */
