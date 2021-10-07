@@ -22,7 +22,7 @@
 							comments_template();
 							the_posts_pagination();
 						else :
-								Benlumia007\Backdrop\Template\get_template_part( 'content/content', 'none' );
+								$engine->display( 'content/404/none'  );
 						endif;
 					?>
 				</main>
