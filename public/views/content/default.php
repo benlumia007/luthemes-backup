@@ -9,6 +9,12 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) { ?>
+		<picture class="post-thumbnail">
+			<source media="(max-width: 1024px)" srcset="<?php the_post_thumbnail_url( 'camaraderie-medium-thumbnails' ); ?>">
+			<?php the_post_thumbnail( 'camaraderie-small-thumbnails' ); ?>
+		</picture>
+	<?php } ?>
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
 			<?php printf( '<span class="sticky-post">%1$s</span>', esc_html__( 'Featured', 'initiator' ) ); ?>
