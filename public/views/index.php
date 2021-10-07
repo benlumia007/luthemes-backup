@@ -12,7 +12,7 @@
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
 		<div id="main" class="site-main">
-			<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'right-sidebar' ) ); ?>">
+			<div id="layout" class="no-sidebar">
 				<main id="primary" class="content-area">
 					<?php
 						if ( have_posts() ) :
@@ -25,7 +25,6 @@
 						endif;
 					?>
 				</main>
-				<?php Benlumia007\Backdrop\Theme\Sidebar\display( 'sidebar', [ 'primary' ] ); ?>
 			</div>
 		</div>
 	</section>
