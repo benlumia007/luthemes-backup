@@ -27,7 +27,7 @@
 						endif;
 					?>
 				</main>
-				<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'portfolio' ] ); ?>
+				<?php Benlumia007\Backdrop\Theme\Sidebar\display( 'sidebar', [ 'portfolio' ] ); ?>
 			</div>
 		</div>
 	</section>
