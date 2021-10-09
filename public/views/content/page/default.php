@@ -9,7 +9,7 @@
  * @link      https://github.com/benlumia007/luthemes)
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
 		</header>

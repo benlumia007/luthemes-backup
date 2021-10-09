@@ -18,7 +18,7 @@
 					<?php
 						if ( have_posts() ) :
 							while ( have_posts() ) : the_post();
-								$engine->display( 'content/single'  );
+								$engine->display( 'content/portfolio'  );
 							endwhile;
 							comments_template();
 							the_posts_pagination();

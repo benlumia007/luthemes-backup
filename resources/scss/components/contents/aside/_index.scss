@@ -96,17 +96,32 @@
  .widget-area tr:nth-of-type(odd) {
 	 background: #eeeeee;
  }
- 
+
  .widget-area th {
-	 background: #333333;
-	 color: #ffffff;
-	 font-weight: 700;
+	background: #333333;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 1.125rem;
+	width: 10%;
  }
  
  .widget-area th, td {
-	 border: 0.063em solid #cccccc;
-	 text-align: left;
-	 padding: 0.438em;
+		border: 0.063em solid #cccccc;
+		text-align: left;
+		padding-left: 0.4rem;
+ }
+
+.widget-area .details {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.widget-area .details th {
+	background: #333333;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 0.813rem;
+	width: 40%;
  }
  
  .rss-date {

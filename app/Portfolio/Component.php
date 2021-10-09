@@ -34,7 +34,7 @@ class Component implements Bootable {
 			'public'       => true,
 			'has_archive'  => true,
 			'menu_icon'    => 'dashicons-category',
-			'supports'     => array( 'title', 'editor', 'thumbnail' ),
+			'supports'     => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
 			'taxonomies'   => array( 'portfolio_category' ),
 			'show_ui'      => true,
 			'rewrite'      => array(

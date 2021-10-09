@@ -1,5 +1,5 @@
 <?php
-namespace Luthemes\Widget\Portfolio;
+namespace Luthemes\Widget\Portfolio\Details;
 use Benlumia007\Backdrop\Contracts\Bootable;
 use WP_Widget;
 
@@ -31,40 +31,40 @@ class Component extends WP_Widget implements Bootable {
         if ( ! empty( $instance['title'] ) ) {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
         };
-        
-        $portfolios = get_posts( array(
-            'post_type'     => 'portfolio',
-            'post_status'   => 'publish',
-            'include' => array( get_queried_object_id() ),
-        
-        ) );
-        
-        if( !empty( $portfolios ) ){
-            $taxonomies = [];
-            
-            foreach( $portfolios as $portfolio ){
-                $taxonomies[] = get_the_terms( $portfolio->ID, 'portfolio_category' );
-    
-            }
-    
-            $terminologies = [];
-    
-            foreach( $taxonomies as $categories ) {
-                foreach( $categories as $category ) {
-                    $terminologies[] = array(
-                        'name'      => $category->name,
-                        'slug'      => $category->slug
-                    );
-                }
-            }
 
-            $terms = array_unique( $terminologies, SORT_REGULAR) ;
-            echo '<ul>';
-                foreach ( $terms as $term ) {
-                    echo '<li>' . $term['name'] . '</li>';
-                }
-            echo '</ul>';
-        }
+        $name    = get_post_meta( get_the_ID(), 'Name', true );
+        $version = get_post_meta( get_the_ID(), 'Version', true );
+        $release = get_post_meta( get_the_ID(), 'Release Date', true );
+        $updated = get_post_meta( get_the_ID(), 'Last Updated', true );
+        $type    = get_post_meta( get_the_ID(), 'Type', true );
+
+        echo '<table class="details">';
+            echo '<tbody>';
+                echo '<tr>';
+                    echo '<th>Name</th>';
+                    echo '<td>' . $name . '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                    echo '<th>Release Date</th>';
+                    echo '<td>' . $release . '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                    echo '<th>Last Updated</th>';
+                    echo '<td>' . $updated . '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                    if ( isset( $type ) ) {
+                        echo '<th>Type</th>';
+                        echo '<td>' . $type . '</td>';
+                    }
+                echo '</tr>';
+                echo '<tr>';
+                    echo '<th>Version</th>';
+                    echo '<td>' . $version . '</td>';
+            echo '</tr>';
+            echo '</tbody>';
+        echo '</table>';
+    
 
         echo $args['after_widget']; 
     }
@@ -80,7 +80,7 @@ class Component extends WP_Widget implements Bootable {
 
     public function boot() {
         add_action('widgets_init', function() {
-            register_widget( 'Luthemes\\Widget\\Portfolio\\Component' );
+            register_widget( 'Luthemes\\Widget\\Portfolio\\Details\\Component' );
         } );
     }
 }

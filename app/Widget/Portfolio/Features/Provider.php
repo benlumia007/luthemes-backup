@@ -8,8 +8,8 @@
  * @author    Benjamin Lu ( https://getbenonit.com )
  */
 
-namespace Luthemes\Widget\Portfolio;
-use Luthemes\Widget\Portfolio\Component;
+namespace Luthemes\Widget\Portfolio\Features;
+use Luthemes\Widget\Portfolio\Features\Component;
 use Benlumia007\Backdrop\Tools\ServiceProvider;
 
 class Provider extends ServiceProvider {
