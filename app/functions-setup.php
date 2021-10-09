@@ -1,17 +1,18 @@
 <?php
 /**
- * luthemes ( functions-setup.php )
+ * Theme Setup
  *
- * @package   luthemes
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
+ * @package   Luthemes
  * @author    Benjamin Lu ( https://benjlu.com )
+ * @copyright Copyright (C) 2014-2021. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/luthemes
  */
 
 /**
  * Define namespace
  */
-namespace luthemes;
+namespace Luthemes;
 
 /**
  * Setup Theme Support.
@@ -48,13 +49,13 @@ add_action( 'after_setup_theme', function() {
 		 * By adding add_theme_support( 'html5', arrayy() );, this feature when enabled allows the user use of HTML5 markup for
 		 * comment list, comment forms, search forms, galleries, and captions.
 		 */
-		add_theme_support( 'html5', array(
+		add_theme_support( 'html5', [
 			'comment-list',
 			'comment-form',
 			'search-form',
 			'gallery',
-			'caption',
-		) );
+			'caption'
+		] );
 
 		/**
 		 * By adding add_theme_support( 'post-thumbnails' );, this feature when enabled allows you to setup featured images
@@ -67,9 +68,9 @@ add_action( 'after_setup_theme', function() {
 		] );
 
 		/**
-		 * By add_image_size( 'luthemes-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
+		 * By add_image_size( 'luthemes-small-thumbnails', 300, 300, true );. This should be used for content in the home for blogs.
 		 */
-		add_image_size( 'luthemes-small-thumbnails', 324, 324, true );
+		add_image_size( 'luthemes-small-thumbnails', 280, 280, true );
 
 		/**
 		 * By add_image_size( 'luthemes-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.

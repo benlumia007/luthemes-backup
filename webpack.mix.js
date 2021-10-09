@@ -55,13 +55,6 @@ mix.options( {
 } );
 
 /*
- * Builds sources maps for assets.
- *
- * @link https://laravel.com/docs/5.6/mix#css-source-maps
- */
-mix.sourceMaps();
-
-/*
  * Versioning and cache busting. Append a unique hash for production assets. If
  * you only want versioned assets in production, do a conditional check for
  * `mix.inProduction()`.

@@ -1,11 +1,12 @@
 <?php
 /**
- * Initiator ( content-single.php )
+ * Luthemes ( content-single.php )
  *
- * @package   Initiator
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author    Benjamin Lu ( https://benjlu.com )
+ * @package   Luthemes
+ * @author    Benjamin Lu ( benlumia007@gmail.com )
+ * @copyright Copyright (C) 2014-2021. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/luthemes
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -27,11 +28,11 @@
 		<?php
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'initiator' ),
+					'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'luthemes' ),
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'initiator' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'luthemes' ) . ' </span>%',
 					'separator'   => '<span class="screen-reader-text">,</span> ',
 				)
 			);

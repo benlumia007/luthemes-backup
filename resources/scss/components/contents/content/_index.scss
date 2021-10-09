@@ -43,7 +43,7 @@
             background: #ffffff;
             border: 0.063em solid #cccccc;
             margin-bottom: 1.125rem;
-            min-height: 18rem;
+            min-height: 15.25rem;
             padding: 1.125rem;
 
             .entry-header {
@@ -60,6 +60,8 @@
             }
 
             .entry-metadata {
+                font-size: 0.875rem;
+
                 .fa-user {
                     padding-right: 0.3rem;
                 }
@@ -85,9 +87,19 @@
     
                     .size-luthemes-small-thumbnails {
                         height: auto;
-                        margin-bottom: 1.125em;
+                        margin-bottom: 0.5rem;
                         width: auto;
                     }
+                }
+            }
+        }
+    }
+
+    .right-sidebar {
+        .content-area {
+            .post-thumbnail {
+                .size-luthemes-medium-thumbnails {
+                    margin-bottom: 0.5rem;
                 }
             }
         }
@@ -99,7 +111,7 @@
         .content-area {
             .has-post-thumbnail {
                 position: relative;
-                padding-left: 21.375em;
+                padding-left: 18.625rem;
         
                 .post-thumbnail {
                     left: 0;
@@ -108,5 +120,21 @@
                 }
             }
         }  
+    }
+
+    .right-sidebar {
+        .content-area {
+            .post-thumbnail {
+                .size-luthemes-medium-thumbnails {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .entry-taxonomies {
+                .cat-link {
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }
