@@ -14,7 +14,7 @@ use Benlumia007\Backdrop\Theme\Sidebar\Component as SidebarContract;
 
 class Component extends SidebarContract {
     public function sidebars() {
-        return array(
+        return [
             'primary' => [
                 'name' => esc_html__( 'Primary Sidebar', 'luthemes' ),
                 'desc' => esc_html__( 'test', 'luthemes' ),
@@ -27,6 +27,6 @@ class Component extends SidebarContract {
                 'name' => esc_html__( 'Portfolio Sidebar', 'luthemes' ),
                 'desc' => esc_html__( 'Portfolio Sidebar', 'luthemes' )
             ]
-        );
+        ];
     }
 }   
