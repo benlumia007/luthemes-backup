@@ -449,12 +449,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/backdrop-theme.git",
-                "reference": "b10026bc0ad4f23be41ab0a02d581f5b6434f3d8"
+                "reference": "5ffbd3d86a8144d1e6f71d3e06a71320279779cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-theme/zipball/b10026bc0ad4f23be41ab0a02d581f5b6434f3d8",
-                "reference": "b10026bc0ad4f23be41ab0a02d581f5b6434f3d8",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-theme/zipball/5ffbd3d86a8144d1e6f71d3e06a71320279779cc",
+                "reference": "5ffbd3d86a8144d1e6f71d3e06a71320279779cc",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
                 "issues": "https://github.com/benlumia007/backdrop-theme/issues",
                 "source": "https://github.com/benlumia007/backdrop-theme/tree/v1.0.0"
             },
-            "time": "2021-10-04T23:44:43+00:00"
+            "time": "2021-10-09T18:38:41+00:00"
         }
     ],
     "packages-dev": [],
@@ -521,5 +521,5 @@
         "php": ">=7.3.24"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
