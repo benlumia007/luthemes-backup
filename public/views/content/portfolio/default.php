@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( has_post_thumbnail() ) { ?>
 		<picture class="post-thumbnail">
-			<?php the_post_thumbnail( 'luthemes-medium-thumbnails' ); ?>
+			<?php the_post_thumbnail( 'luthemes-large-thumbnails' ); ?>
 		</picture>
 	<?php } ?>
 	<div class="entry-content">
