@@ -18,8 +18,4 @@
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div>
-	<div class="entry-taxonomies">
-		<?php Benlumia007\Backdrop\Theme\Entry\display_categories(); ?>
-		<?php Benlumia007\Backdrop\Theme\Entry\display_tags(); ?>
-	</div>
 </article>
