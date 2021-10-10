@@ -25,9 +25,12 @@
         }
 
         .entry-content {
+            margin-top: 1.125rem;
+            
             .portfolio-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 1.125rem;
             }
         }
     }
