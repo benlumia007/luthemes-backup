@@ -104,9 +104,9 @@ add_filter( 'manage_portfolio_posts_columns', function( $columns ) {
 	foreach ( $columns as $key => $value ) {
 		$columns_new[ $key ] = $value;
 		if ( $key === 'title' ) {
-			
+
 			// Add 'thumbnail' after 'title'
-			$columns_new['riv_post_thumbs'] = __( 'Thumbnail', 'luthemes' );
+			$columns_new['riv_post_thumbs'] = esc_html__( 'Thumbnail', 'luthemes' );
 		}
 	}
 
