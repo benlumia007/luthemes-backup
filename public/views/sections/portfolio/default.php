@@ -37,7 +37,7 @@
                                 </div>
                         <?php }
 						}
-					}
+					} 
 					wp_reset_postdata();
 				?>
 			</div>

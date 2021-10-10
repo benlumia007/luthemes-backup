@@ -125,3 +125,9 @@ add_action( 'backdrop/templates/register', function( $templates ) {
 		]
 	);
 } );
+
+add_action( 'manage_portfolio_posts_custom_column', function( $name, $id ) {
+	if ( $name === 'riv_post_thumbs' ) {
+		the_post_thumbnail( [ 150, 150 ] );
+	}
+}, 10, 2 );

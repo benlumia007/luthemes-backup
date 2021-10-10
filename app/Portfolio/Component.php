@@ -14,7 +14,7 @@ use Benlumia007\Backdrop\Contracts\Bootable;
 class Component implements Bootable {
 
 	public function create_portfolio_post_type() {
-		$labels = array(
+		$labels = [
 			'name'               => esc_html__( 'Portfolios', 'luthemes' ),
 			'singular_name'      => esc_html__( 'Portfolio', 'luthemes' ),
             'add_new'            => esc_html__( 'Add New Portfolio', 'luthemes' ),
@@ -27,22 +27,22 @@ class Component implements Bootable {
 			'not_found_in_trash' => esc_html__( 'Not Found in Trash', 'luthemes' ),
 			'name_admin_bar'     => esc_html__( 'Portfolio', 'luthemes' ),
 			'parent_item_colon'  => esc_html__( 'Parent Item: ', 'luthemes' ),
-		);
+		];
 
-		$args = array(
+		$args = [
 			'labels'       => $labels,
 			'public'       => true,
 			'has_archive'  => true,
 			'menu_icon'    => 'dashicons-category',
-			'supports'     => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-			'taxonomies'   => array( 'portfolio_category' ),
+			'supports'     => [ 'title', 'editor', 'thumbnail', 'custom-fields' ],
+			'taxonomies'   => [ 'portfolio_category' ],
 			'show_ui'      => true,
-			'rewrite'      => array(
+			'rewrite'      => [
 				'with_front' => false,
 				'slug' => 'portflio',
-			),
+			],
 			'show_in_rest' => true,
-		);
+		];
 
 		register_post_type( 'portfolio', $args );
 	}
