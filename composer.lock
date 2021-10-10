@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/backdrop-customize.git",
-                "reference": "8c2ca90d0a8c2aa05387404cad6fa114d60e8d71"
+                "reference": "d4479c69b28f7fe491236304f9b03ac2d09d99e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-customize/zipball/8c2ca90d0a8c2aa05387404cad6fa114d60e8d71",
-                "reference": "8c2ca90d0a8c2aa05387404cad6fa114d60e8d71",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-customize/zipball/d4479c69b28f7fe491236304f9b03ac2d09d99e4",
+                "reference": "d4479c69b28f7fe491236304f9b03ac2d09d99e4",
                 "shasum": ""
             },
             "require": {
@@ -98,7 +98,7 @@
                 "issues": "https://github.com/benlumia007/backdrop-customize/issues",
                 "source": "https://github.com/benlumia007/backdrop-customize/tree/v1.0.0"
             },
-            "time": "2021-10-01T06:54:14+00:00"
+            "time": "2021-10-10T04:03:59+00:00"
         },
         {
             "name": "benlumia007/backdrop-customize-helpers",

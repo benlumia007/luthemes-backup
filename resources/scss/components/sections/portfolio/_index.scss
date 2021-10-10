@@ -1,0 +1,34 @@
+//
+// Initiator ( components/_index.scss )
+//
+// @package   Initiator
+// @copyright Copyright (C) 2019-2021. Benjamin Lu
+// @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
+// @author    Benjamin Lu ( https://getbenonit.com )
+//
+
+.site-portfolio {
+    background: #ffffff;
+
+    .content-area {
+        margin: 0 auto;
+        max-width: 72.75rem; // 1164px;
+        padding: 1.125rem;
+
+        .portfolio-header {
+            text-align: center;
+
+            .portfolio-title {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .entry-content {
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
