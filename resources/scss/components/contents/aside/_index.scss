@@ -41,6 +41,10 @@
 	 margin-bottom: 1.125em;
 	 font-size: 0.875em;
 	 padding: 1.125em;
+
+	 .widget_subjects {
+		margin-bottom: 0;
+	}
  }
  
  .widget ul,
@@ -181,7 +185,3 @@
  .textwidget {
 	 line-height: 1.6em;
  }
-
-.widget_subjects {
-	margin-bottom: 0;
-}
