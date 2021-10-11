@@ -30,3 +30,6 @@
 			<?php Benlumia007\Backdrop\Theme\Menu\display( 'menu', [ 'primary' ] ); ?>
 		</div>
 	</header>
+	<?php if ( get_header_image() ) : ?>
+    <div class="header-image"></div>
+<?php endif; ?>
