@@ -132,19 +132,17 @@ add_action( 'manage_portfolio_posts_custom_column', function( $name, $id ) {
 	}
 }, 10, 2 );
 
-add_action(
-	'wp_enqueue_scripts', function() {
-		$header_image = esc_url( get_theme_mod( 'header_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
+add_action( 'wp_enqueue_scripts', function() {
+	$header_image = esc_url( get_theme_mod( 'header_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
 
-		$custom_css = "
-			.header-image {
-				background-attachment: scroll;
-				background: url( {$header_image} );
-				background-position: center;
-				background-repeat: no-repeat;
-				padding: 10em 0;
-			}
-		";
-		wp_add_inline_style( 'luthemes-screen', $custom_css );
-	}
-);
+	$custom_css = "
+		.header-image {
+			background-attachment: scroll;
+			background: url( {$header_image} );
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 10em 0;
+		}
+	";
+	wp_add_inline_style( 'luthemes-screen', $custom_css );
+} );

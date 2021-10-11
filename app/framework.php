@@ -29,6 +29,7 @@ $luthemes->provider( Benlumia007\Backdrop\Template\View\Provider::class );
  */
 $luthemes->provider( Luthemes\Customize\Home\Provider::class );
 $luthemes->provider( Luthemes\Menu\Provider::class );
+$luthemes->provider( Luthemes\Docs\Provider::class );
 $luthemes->provider( Luthemes\Portfolio\Provider::class );
 $luthemes->provider( Luthemes\Sidebar\Provider::class );
 $luthemes->provider( Luthemes\Widget\Portfolio\Details\Provider::class );
