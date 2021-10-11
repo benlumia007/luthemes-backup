@@ -31,4 +31,34 @@
 			</div>
 		</div>
 	</section>
+	<section id="related" class="site-related">
+		<div class="entry-content">
+                    <ul class="jetpack-portfolio-grid">
+                        <?php $query = new WP_Query(array(
+                            'post_type'         => 'portfolio', 
+                            'posts_per_page'    => 3, 
+                            'orderby'           => 'rand',
+                            'post__not_in'      => array(get_queried_object_id())
+                        )); 
+                        ?>
+                        <?php if ($query->have_posts()) { ?>
+                            <?php while ($query->have_posts()) { ?>
+                                <?php $query->the_post(); ?>
+                                   <?php if ( has_post_thumbnail() ) { ?>
+                                    <li>
+										<?php the_post_thumbnail('luthemes-large-thumbnails'); ?>
+										<div class="wp-caption">
+                                        <div class="wp-caption-text">
+                                            <h3 class="portfolio-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail_caption(); ?></a></h3>
+                                            <span><?php echo wptexturize( wp_strip_all_tags( get_post( get_post_thumbnail_id() )->post_content ) ); ?></span>
+                                        </div>
+                                    </div>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?> 
+                            <?php wp_reset_postdata(); ?>
+                        <?php } ?>
+                    </ul>
+                </div>
+	</section>
 <?php $engine->display( 'footer' ); ?>

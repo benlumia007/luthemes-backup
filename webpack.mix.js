@@ -80,5 +80,4 @@ mix.js( `${devPath}/js/app.js`, 'js' );
  */
 
 // Compile SASS/CSS.
-mix.sass( `${devPath}/scss/screen.scss`, 'css', )
-   .sass( `${devPath}/scss/editor.scss`, 'css' );
+mix.sass( `${devPath}/scss/screen.scss`, 'css', );
