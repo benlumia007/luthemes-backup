@@ -33,7 +33,6 @@
 	 width: 30%;
  }
  
- .download-area .widget,
  .widget-area .widget {
 	 background: #ffffff;
 	 border: 0.063em solid #cccccc;
@@ -42,7 +41,7 @@
 	 font-size: 0.875em;
 	 padding: 1.125em;
 
-	 .widget_subjects {
+	 &.widget_subjects {
 		margin-bottom: 0;
 	}
  }
