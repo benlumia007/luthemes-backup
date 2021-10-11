@@ -98,19 +98,19 @@ add_filter( 'backdrop/template/path', function() {
 	return 'public/views';
 } );
 
-add_filter( 'manage_portfolio_posts_columns', function( $columns ) {
-	$columns_new = [];
+add_filter( 'manage_portfolio_posts_columns', function( $defaults ) {
+	$columns = [];
 
-	foreach ( $columns as $key => $value ) {
-		$columns_new[ $key ] = $value;
+	foreach ( $defaults as $key => $value ) {
+		$columns[ $key ] = $value;
 		if ( $key === 'title' ) {
 
 			// Add 'thumbnail' after 'title'
-			$columns_new['riv_post_thumbs'] = esc_html__( 'Thumbnail', 'luthemes' );
+			$columns['riv_post_thumbs'] = esc_html__( 'Thumbnail', 'luthemes' );
 		}
 	}
 
 	// If the 'title' column is not set then the 'thumbnail' column won't be
 	// added either. This is probably not worth worrying about.
-	return $columns_new;
+	return $columns;
 }, 5, 2 );

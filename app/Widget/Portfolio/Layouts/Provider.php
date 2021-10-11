@@ -8,8 +8,8 @@
  * @author    Benjamin Lu ( https://getbenonit.com )
  */
 
-namespace Luthemes\Widget\Portfolio\Features;
-use Luthemes\Widget\Portfolio\Features\Component;
+namespace Luthemes\Widget\Portfolio\Layouts;
+use Luthemes\Widget\Portfolio\Layouts\Component;
 use Benlumia007\Backdrop\Tools\ServiceProvider;
 
 class Provider extends ServiceProvider {
@@ -22,11 +22,11 @@ class Provider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		$this->app->singleton( 'feature/widget', Component::class );
+		$this->app->singleton( 'layouts/widget', Component::class );
 
     }
     
     public function boot() {
-        $this->app->resolve( 'feature/widget' )->boot();
+        $this->app->resolve( 'layouts/widget' )->boot();
     }
 }

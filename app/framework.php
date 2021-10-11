@@ -33,6 +33,8 @@ $luthemes->provider( Luthemes\Portfolio\Provider::class );
 $luthemes->provider( Luthemes\Sidebar\Provider::class );
 $luthemes->provider( Luthemes\Widget\Portfolio\Details\Provider::class );
 $luthemes->provider( Luthemes\Widget\Portfolio\Features\Provider::class );
+$luthemes->provider( Luthemes\Widget\Portfolio\Layouts\Provider::class );
+$luthemes->provider( Luthemes\Widget\Portfolio\Subjects\Provider::class );
 
 
 /**

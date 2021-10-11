@@ -1,5 +1,5 @@
 <?php
-namespace Luthemes\Widget\Portfolio\Features;
+namespace Luthemes\Widget\Portfolio\Subjects;
 use Benlumia007\Backdrop\Contracts\Bootable;
 use WP_Widget;
 
@@ -7,8 +7,8 @@ class Component extends WP_Widget implements Bootable {
     function __construct() {
  
         parent::__construct(
-            'features',  // Base ID
-            'Features'   // Name
+            'subjects',  // Base ID
+            'Subjects'   // Name
         ); 
     }
 
@@ -33,7 +33,7 @@ class Component extends WP_Widget implements Bootable {
         };
 
         $defaults = [
-            'taxonomy' => 'features',
+            'taxonomy' => 'subjects',
         ];
 
         $terms = get_terms( $defaults ); 
@@ -63,7 +63,7 @@ class Component extends WP_Widget implements Bootable {
 
     public function boot() {
         add_action('widgets_init', function() {
-            register_widget( 'Luthemes\\Widget\\Portfolio\\Features\\Component' );
+            register_widget( 'Luthemes\\Widget\\Portfolio\\Subjects\\Component' );
         } );
     }
 }
