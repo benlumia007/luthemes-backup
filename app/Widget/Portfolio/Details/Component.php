@@ -32,11 +32,12 @@ class Component extends WP_Widget implements Bootable {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
         };
 
-        $name    = get_post_meta( get_the_ID(), 'Name', true );
-        $version = get_post_meta( get_the_ID(), 'Version', true );
-        $updated = get_post_meta( get_the_ID(), 'Last Updated', true );
-        $php     = get_post_meta( get_the_ID(), 'PHP', true );
-        $type    = get_post_meta( get_the_ID(), 'Type', true );
+        $name     = get_post_meta( get_the_ID(), 'Name', true );
+        $version  = get_post_meta( get_the_ID(), 'Version', true );
+        $updated  = get_post_meta( get_the_ID(), 'Last Updated', true );
+        $php      = get_post_meta( get_the_ID(), 'PHP', true );
+        $type     = get_post_meta( get_the_ID(), 'Type', true );
+        $download = get_post_meta( get_the_ID(), 'Download', true );
 
         echo '<table class="details">';
             echo '<tbody>';
@@ -59,7 +60,11 @@ class Component extends WP_Widget implements Bootable {
                 echo '<tr>';
                     echo '<th>Version</th>';
                     echo '<td>' . $version . '</td>';
-            echo '</tr>';
+                echo '</tr>';
+                echo '<tr>';
+                    echo '<th>Download</th>';
+                    echo '<td><a href="' . esc_url( $download ) . '">' . esc_html__( 'Download', 'luthemes' ) . '</a></td>';
+                echo '</tr>';
             echo '</tbody>';
         echo '</table>';
     
