@@ -35,6 +35,7 @@ class Component extends WP_Widget implements Bootable {
         $name    = get_post_meta( get_the_ID(), 'Name', true );
         $version = get_post_meta( get_the_ID(), 'Version', true );
         $updated = get_post_meta( get_the_ID(), 'Last Updated', true );
+        $php     = get_post_meta( get_the_ID(), 'PHP', true );
         $type    = get_post_meta( get_the_ID(), 'Type', true );
 
         echo '<table class="details">';
@@ -48,10 +49,12 @@ class Component extends WP_Widget implements Bootable {
                     echo '<td>' . $updated . '</td>';
                 echo '</tr>';
                 echo '<tr>';
-                    if ( isset( $type ) ) {
-                        echo '<th>Type</th>';
-                        echo '<td>' . $type . '</td>';
-                    }
+                    echo '<th>PHP</th>';
+                    echo '<td>' . $php . '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                    echo '<th>Type</th>';
+                    echo '<td>' . $type . '</td>';
                 echo '</tr>';
                 echo '<tr>';
                     echo '<th>Version</th>';
