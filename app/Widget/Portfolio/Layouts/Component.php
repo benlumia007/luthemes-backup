@@ -32,21 +32,18 @@ class Component extends WP_Widget implements Bootable {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
         };
 
-        $defaults = [
-            'taxonomy' => 'layouts',
-            'exclude' => get_queried_object_id(),
-        ];
-
-        $terms = get_terms( $defaults ); 
-
         echo '<table>';
             echo '<tbody>';
+            $terms = get_the_terms( get_the_ID(), 'layouts' );
+
+            if (  ! empty ( $terms ) ) {
                 foreach ( $terms as $term ) {
                 echo '<tr>';
                     echo '<th><i class="fa fa-check-square" aria-hidden="true"></i></th>';
                     echo '<td>' . $term->name . '</td>';
                 echo '</tr>';
                 }
+            }
             echo '</tbody>';
         echo '</table>';
 
