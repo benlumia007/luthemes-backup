@@ -16,8 +16,23 @@
  */
 
 /**
+ * Triggered after switch themes and check if it meets the requirements.
+ */
+add_action( 'after_switch_theme', function() {
+	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
+		switch_theme( get_option( 'theme_switched' ) );
+
+		add_action( 'admin_notices', function() {
+			printf( '<div class="error"><p>%s</p></div>', esc_html( luthemes_compatibility_check() ) );
+		} );
+	}
+	return false;
+} );
+
+/**
  * 1.0 - Compatibility Check
  */
+
 function luthemes_compatibility_check() {
 	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) ) {
 		return sprintf(
@@ -35,25 +50,6 @@ function luthemes_compatibility_check() {
 		);
 	}
 	return '';
-}
-
-/**
- * Triggered after switch themes and check if it meets the requirements.
- */
-function luthemes_switch_theme() {
-	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
-		switch_theme( get_option( 'theme_switched' ) );
-		add_action( 'admin_notices', 'luthemes_upgrade_notice' );
-	}
-	return false;
-}
-add_action( 'after_switch_theme', 'luthemes_switch_theme' );
-
-/**
- * Displays an error if it doesn't meet the requirements.
- */
-function luthemes_upgrade_notice() {
-	printf( '<div class="error"><p>%s</p></div>', esc_html( luthemes_compatibility_check() ) );
 }
 
 /**
