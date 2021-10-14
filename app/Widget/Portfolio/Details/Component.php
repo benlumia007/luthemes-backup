@@ -42,28 +42,40 @@ class Component extends WP_Widget implements Bootable {
         echo '<table class="details">';
             echo '<tbody>';
                 echo '<tr>';
-                    echo '<th>Name</th>';
-                    echo '<td>' . $name . '</td>';
+                    if ( ! empty( $name) ) {
+                        echo '<th>Name</th>';
+                        echo '<td>' . $name . '</td>';
+                    }
                 echo '</tr>';
                 echo '<tr>';
-                    echo '<th>Last Updated</th>';
-                    echo '<td>' . $updated . '</td>';
+                    if ( ! empty( $updated ) ) {
+                        echo '<th>Last Updated</th>';
+                        echo '<td>' . $updated . '</td>';
+                    }
                 echo '</tr>';
                 echo '<tr>';
-                    echo '<th>PHP</th>';
-                    echo '<td>' . $php . '</td>';
+                    if ( ! empty( $php ) ) {
+                        echo '<th>PHP</th>';
+                        echo '<td>' . $php . '</td>';
+                    }
                 echo '</tr>';
                 echo '<tr>';
-                    echo '<th>Type</th>';
-                    echo '<td>' . $type . '</td>';
+                    if ( ! empty( $type ) ) {
+                        echo '<th>Type</th>';
+                        echo '<td>' . $type . '</td>';
+                    }
                 echo '</tr>';
                 echo '<tr>';
-                    echo '<th>Version</th>';
-                    echo '<td>' . $version . '</td>';
+                    if ( ! empty( $version ) ) {
+                        echo '<th>Version</th>';
+                        echo '<td>' . $version . '</td>';
+                    }
                 echo '</tr>';
                 echo '<tr>';
-                    echo '<th>Download</th>';
-                    echo '<td><a href="' . esc_url( $download ) . '">' . esc_html__( 'Download', 'luthemes' ) . '</a></td>';
+                    if ( ! empty( $download ) ) {
+                        echo '<th>Download</th>';
+                        echo '<td><a href="' . esc_url( $download ) . '">' . esc_html__( 'Download', 'luthemes' ) . '</a></td>';
+                    }
                 echo '</tr>';
             echo '</tbody>';
         echo '</table>';
