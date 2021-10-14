@@ -37,7 +37,7 @@ function luthemes_compatibility_check() {
 	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
-			__( 'luthemes requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'luthemes' ),
+			__( 'luthemes requires at least ClassicPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'luthemes' ),
 			'4.9',
 			$GLOBALS['wp_version']
 		);
