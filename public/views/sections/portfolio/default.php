@@ -19,7 +19,7 @@
 		<div class="entry-content">
 			<div class="portfolio-grid">
 				<?php $posts_per_page = get_theme_mod( 'custom_portfolio_items', 9 ); ?>
-				<?php $query = new WP_Query( [ 'post_type'      => 'portfolio', 'posts_per_page' => $posts_per_page ] ); ?>
+				<?php $query = new WP_Query( [ 'post_type' => 'portfolio', 'posts_per_page' => $posts_per_page ] ); ?>
                 <?php 
                     if ( $query->have_posts() ) {
 						while ( $query->have_posts() ) {

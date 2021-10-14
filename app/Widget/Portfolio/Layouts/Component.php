@@ -34,6 +34,7 @@ class Component extends WP_Widget implements Bootable {
 
         $defaults = [
             'taxonomy' => 'layouts',
+            'exclude' => get_queried_object_id(),
         ];
 
         $terms = get_terms( $defaults ); 
