@@ -11,8 +11,6 @@ jobs:
       - name: step one
         uses: actions/checkout@v2
       - name: step two
-        run: npm run build
-      - name: step three
         run: rm -rf ~/public_html/wp-content/themes/luthemes
-      - name: step four
+      - name: step three
         run: mv -f luthemes ~/public_html/wp-content/themes/luthemes
