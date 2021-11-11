@@ -1,0 +1,22 @@
+name: luthemes
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: step one
+        uses: actions/checkout@v2
+      - name: step two
+        run: composer install
+      - name: step three
+        run: npm install
+      - name: step four
+        run: npm run build
+      - name: step five
+        run: rm -rf ~/public_html/wp-content/themes/luthemes
+      - name: step six
+        run: mv -f luthemes ~/public_html/wp-content/themes/luthemes
