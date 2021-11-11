@@ -11,12 +11,8 @@ jobs:
       - name: step one
         uses: actions/checkout@v2
       - name: step two
-        run: composer install
-      - name: step three
-        run: npm install
-      - name: step four
         run: npm run build
-      - name: step five
+      - name: step three
         run: rm -rf ~/public_html/wp-content/themes/luthemes
-      - name: step six
+      - name: step four
         run: mv -f luthemes ~/public_html/wp-content/themes/luthemes
