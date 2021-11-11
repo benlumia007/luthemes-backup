@@ -10,7 +10,3 @@ jobs:
     steps:
       - name: step one
         uses: actions/checkout@v2
-      - name: step two
-        run: rm -rf ~/public_html/wp-content/themes/luthemes
-      - name: step three
-        run: mv -f luthemes ~/public_html/wp-content/themes/luthemes
