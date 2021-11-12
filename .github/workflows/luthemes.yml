@@ -17,4 +17,4 @@ jobs:
       - name: step four
         run: npm run build
       - name: step five
-        run: rsync -r luthemes/* /home/luthemes/public_html/wp-content/themes/luthemes
+        run: bash script.sh

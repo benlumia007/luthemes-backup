@@ -22,7 +22,8 @@
 			"app/framework.php",
 			"app/functions-filters.php",
 			"app/functions-scripts.php",
-			"app/functions-setup.php"
+			"app/functions-setup.php",
+            "app/functions-update.php"
 		]
     },
     "require": {
