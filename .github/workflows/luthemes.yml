@@ -17,4 +17,4 @@ jobs:
       - name: step four
         run: npm run build
       - name: step five
-        run: bash script/script.sh
+        run: bash scripts/script.sh
