@@ -18,3 +18,4 @@ jobs:
         run: npm run build
       - name: step five
         uses: actions/cache@v2
+        run: rsync -r luthemes/* /home/luthemes/public_html/wp-content/themes/luthemes
