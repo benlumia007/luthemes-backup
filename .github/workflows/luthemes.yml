@@ -13,4 +13,6 @@ jobs:
       - name: step two
         run: composer install
       - name: step three
+        run: npm install
+      - name: step four
         run: npm run build
