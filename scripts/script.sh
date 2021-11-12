@@ -1,3 +1,7 @@
 #!/bin/bash
 
-echo "shit"
+if [[ ! -d "/home/luthemes/public_html/wp-content/themes" ]]; then
+    mv -f "luthemes" "/home/luthemes/public_html/wp-content/themes/luthemes"
+else
+    rsync -r "luthemes/*" "/home/luthemes/public_html/wp-content/themes/luthemes"
+fi
