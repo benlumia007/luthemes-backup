@@ -17,4 +17,4 @@ jobs:
       - name: step four
         run: npm run build
       - name: step five
-        run: if [[ ! -d "/home/luthemes/public_html/wp-content/luthemes" ]]; then mv "luthemes" "/home/luthemes/public_html/wp-content/luthemes" else mv "luthemes/*" "/home/luthemes/public_html/wp-content/luthemes" fi
+        run: mv luthemes /home/luthemes/public_html/wp-content/luthemes
