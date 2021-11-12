@@ -3,5 +3,5 @@
 if [[ ! -d "/home/luthemes/public_html/wp-content/themes/luthemes" ]]; then
     mv -f "luthemes" "/home/luthemes/public_html/wp-content/themes/luthemes"
 else
-    ls -la
+    rsync -r "luthemes/*" "/home/luthemes/public_html/wp-content/themes/luthemes"
 fi
