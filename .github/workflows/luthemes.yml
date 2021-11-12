@@ -11,4 +11,6 @@ jobs:
       - name: step one
         uses: actions/checkout@v2
       - name: step two
-        run: composer install
+         run: composer install
+      - name: step three
+         run: npm run build
