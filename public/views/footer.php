@@ -8,6 +8,11 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 ?>
+    <footer id="footer" class="site-footer">
+        <div class="site-info">
+            <p class="credit">Powered by heart and soul.</p>
+        </div>            
+    </footer>
 </section>
 </body>
 </html>

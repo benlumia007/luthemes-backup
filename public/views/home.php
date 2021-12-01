@@ -9,3 +9,4 @@
  */
 ?>
 <?php Benlumia007\Alembic\Engine::display( 'header', [], [ 'title' => ! empty( $title ) ? $title : '' ] ); ?>
+<?php Benlumia007\Alembic\Engine::display( 'footer' ); ?>
