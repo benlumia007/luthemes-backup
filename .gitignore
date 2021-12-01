@@ -1,4 +1,6 @@
 node_modules
+public/assets
+public/mix-manifest.json
 vendor
 composer.lock
 package-lock.json
